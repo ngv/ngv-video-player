@@ -1,30 +1,67 @@
 h1. NGV HTML Javascript Video Player
 
+h2.  Introduction
+
+This is a simple HTML5 video player with Flash fallback.
+
+h3. Why another HTML5 video player?
+
+No other player available as of Mar 2012 has the following set of features:
+
+* open source
+* minimal use of JS (only for simple controls UI)
+* flash fallback with any SWF video player using simple <embed> element embedding (eg. for IE 7,8)
+* Fullscreen API support on all browsers that provide the feature (including Firefox > 10)
+* JS to enhance a native HTML5 video element with JS based controls displayed SEPERATELY (not overlayed) from the video element.
+
+h2. Usage
+
+h3. Dependancies
+
+Depends on jquery and jquery-ui (slider only).
+Tested with versions: jquery jquery 1.7.1 and jquery-ui 1.8.17
+
+Tested with JWPlayer 5.3 for Flash fallback in IE only.
+
+The following html structure is required for the external JS-based controls:
+
+bc. <div class="video_controlbar">
+<a id="play_pause_video" class="play_button" href="#" >Play</a>
+<a id="fullscreen" href="#" >Fullscreen</a>
+<div class="video-seek"></div>
+<div class="video-timer">00:00</div>
+</div>
+
+The div element could be replaced with other elements as long as the class names are retained. This HTML can be placed anywhere within the HTML page containing the @<video>@ element.
+
+h2. Credits
+
+Based on concept from an article on opera developer site.:http://dev.opera.com/articles/view/custom-html5-video-player-with-css3-and-jquery/
 
 h2. License
 
 Copyright (c) 2012, National Gallery of Victoria
-    All rights reserved.
+All rights reserved.
 
-    Redistribution and use in source and binary forms, with or without
-    modification, are permitted provided that the following conditions are met:
-    
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright
-      notice, this list of conditions and the following disclaimer in the
-      documentation and/or other materials provided with the distribution.
-    * Neither the name of the <organization> nor the
-      names of its contributors may be used to endorse or promote products
-      derived from this software without specific prior written permission.
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
 
-    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-    ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-    WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-    DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
-    DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-    (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-    LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-    ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-    INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.License: 
+Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+Redistributions in binary form must reproduce the above copyright
+notice, this list of conditions and the following disclaimer in the
+documentation and/or other materials provided with the distribution.
+Neither the name of the <organization> nor the
+names of its contributors may be used to endorse or promote products
+derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
